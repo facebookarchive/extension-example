@@ -1,6 +1,6 @@
 #! /bin/sh
 
-if [ "`which hphpize`" != "" ]; then
+if [ "`which hphpize 2>/dev/null`" != "" ]; then
     # HHVM 3.2.0 or newer
     hphpize
 else
