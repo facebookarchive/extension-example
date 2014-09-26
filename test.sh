@@ -6,6 +6,13 @@ if [ ! -z "${REALPATH}" ]; then
   DIRNAME=`realpath ${DIRNAME}`
 fi
 
-${HPHP_HOME}/hphp/hhvm/hhvm \
+if [ "$HPHP_HOME" != "" ]; then
+    HHVM="${HPHP_HOME}/hphp/hhvm/hhvm"
+else
+    HHVM=hhvm
+fi
+
+$HHVM \
   -vDynamicExtensions.0=${DIRNAME}/example.so \
   ${DIRNAME}/test.php
+
