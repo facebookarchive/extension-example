@@ -14,8 +14,8 @@
    +----------------------------------------------------------------------+
 */
 
-#include "hphp/runtime/base/base-includes.h"
-
+#include "hphp/runtime/base/base-includes.h"   //this file is not exist in version 3.7
+// #include "hphp/runtime/ext/extension.h"  this should be add for version 3.7
 namespace HPHP {
 
 static int64_t HHVM_FUNCTION(example_sum, int64_t a, int64_t b) {
