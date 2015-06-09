@@ -14,7 +14,12 @@
    +----------------------------------------------------------------------+
 */
 
+#include "hphp/runtime/version.h"
+#if (HHVM_VERSION_MAJOR >= 3) && (HHVM_VERSION_MINOR >= 7)
+#include "hphp/runtime/ext/extension.h"
+#else
 #include "hphp/runtime/base/base-includes.h"
+#endif
 
 namespace HPHP {
 
